@@ -107,29 +107,36 @@
         </div>
       </section>
 
-      <section id="why-us-section">
+      <section class="choose-section" id="choose-section">
         <div class="container">
-          <h2 class="why-us-title">
+          <h2 class="choose-title">
             Чому люди <span class="highlight">обирають нас</span>
           </h2>
-          <ul>
-            <li>
-              <!-- game-icons:materials-science -->
-              <p class="why-us-text">
+
+          <ul class="choose-container">
+            <li class="choose-card">
+              <svg width="48" height="48">
+                <use href="./img/icons.svg#icon-science"></use>
+              </svg>
+              <p class="choose-text">
                 Всі наші косметологи мають вищу медичну освіту та стаж роботи
                 від 5 років
               </p>
             </li>
-            <li>
-              <!-- medicinecosmeticsbottletreatment_109776 1 -->
-              <p class="why-us-text">
+            <li class="choose-card">
+              <svg width="48" height="48">
+                <use href="./img/icons.svg#icon-cosmetics"></use>
+              </svg>
+              <p class="choose-text">
                 Використовуємо тільки професійне обладнання та косметику,
                 перевірену часом
               </p>
             </li>
-            <li>
-              <!-- ph:crown-light -->
-              <p class="why-us-text">
+            <li class="choose-card">
+              <svg width="48" height="48">
+                <use href="./img/icons.svg#icon-crown"></use>
+              </svg>
+              <p class="choose-text">
                 Наша мета - підкреслити переваги та приховати недоліки, а не
                 переробити
               </p>
@@ -138,39 +145,57 @@
         </div>
       </section>
 
-      <section id="procedures-section">
+      <section class="procedures-section" id="procedures-section">
         <div class="container">
           <h2 class="procedures-title">
             Наші <span class="highlight">процедури</span>
           </h2>
-          <ul>
-            <li>
-              <article>
-                <h3 class="procedures-card-title">Маски для обличчя</h3>
-                <img src="./img/woman-face-mask.webp" alt="Woman face mask" />
-              </article>
-            </li>
-            <li>
-              <article>
-                <h3 class="procedures-card-title">
-                  Ін&rsquo;єкції для обличчя
-                </h3>
-                <img
-                  src="./img/woman-face-injection.webp"
-                  alt="Woman face injection"
-                />
-              </article>
-            </li>
-            <li>
-              <article>
-                <h3 class="procedures-card-title">Очищення обличчя</h3>
-                <img
-                  src="./img/woman-face-cleaning.webp"
-                  alt="Woman face cleaning"
-                />
-              </article>
-            </li>
-          </ul>
+          <div class="procedures-container">
+            <button class="carousel-button" type="button">
+              <svg width="16" height="16">
+                <use href="./img/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <ul class="procedures-list">
+              <li class="procedures-item">
+                <article class="procedures-card">
+                  <img
+                    class="procedures-card-image"
+                    src="./img/woman-face-mask.webp"
+                    alt="Woman face mask"
+                  />
+                  <h3 class="procedures-card-title">Маски для обличчя</h3>
+                </article>
+              </li>
+              <li class="procedures-item">
+                <article class="procedures-card">
+                  <h3 class="procedures-card-title">
+                    Ін&rsquo;єкції для обличчя
+                  </h3>
+                  <img
+                    class="procedures-card-image"
+                    src="./img/woman-face-injection.webp"
+                    alt="Woman face injection"
+                  />
+                </article>
+              </li>
+              <li class="procedures-item">
+                <article class="procedures-card">
+                  <h3 class="procedures-card-title">Очищення обличчя</h3>
+                  <img
+                    class="procedures-card-image"
+                    src="./img/woman-face-cleaning.webp"
+                    alt="Woman face cleaning"
+                  />
+                </article>
+              </li>
+            </ul>
+            <button class="carousel-button" type="button">
+              <svg width="16" height="16">
+                <use href="./img/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
