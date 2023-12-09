@@ -107,6 +107,15 @@ a {
   padding: 0 100px;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Button */
 .button {
   font-weight: 500;
@@ -122,7 +131,7 @@ a {
 
 .button:hover {
   color: var(--color-primary-dark);
-  background-color: transparent;
+  background-color: var(--color-secondary-white);
 }
 
 /* Link */
@@ -400,7 +409,8 @@ a {
 .contacts-section-container {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 48px;
+  margin-bottom: 96px;
 }
 
 .contacts-section-content {
@@ -422,7 +432,7 @@ a {
   display: flex;
   flex-direction: column;
   padding: 48px 56px;
-  background-image: '../img/backgroud.png';
+  background-image: url('../img/background.png');
   background-color: var(--color-primary-dark);
   width: 420px;
   height: 480px;
@@ -434,6 +444,7 @@ a {
 }
 
 .contacts-title {
+  margin-bottom: 0;
   text-align: center;
 }
 
@@ -448,11 +459,51 @@ a {
   color: var(--color-primary-light);
 }
 
-.contacts-text-privacy {
-  color: var(--color-secondary-gray-light);
+.input-label {
+  position: absolute;
+  top: 18px;
+  left: 32px;
+}
+
+.input-control {
+  position: relative;
+  padding: 18px 32px;
+  margin-bottom: 16px;
+  width: 100%;
+  font-size: 13px;
+  border: 2px solid var(--color-secondary-gray-light);
+  border-radius: 32px;
+  color: var(--color-secondary-white);
+  background-color: transparent;
+}
+
+.input-control:focus {
+  background-color: var(--color-secondary-gray-light);
+  outline: none;
+}
+
+.input-control::placeholder {
+  color: var(--color-secondary-white);
+}
+
+.contacts-section-button {
+  display: block;
+  padding: 16px 32px;
+  margin: 0 auto 8px;
+}
+
+.contacts-terms {
+  margin: 0 auto;
+  max-width: 212px;
   font-size: 12px;
   line-height: 1.5;
+  color: var(--color-secondary-gray-light);
   text-align: center;
+}
+
+.contacts-terms-link {
+  color: var(--color-secondary-gray-light);
+  text-underline-offset: 2px;
 }
 
 /* Footer */
