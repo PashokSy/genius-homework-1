@@ -201,32 +201,86 @@
 
       <section id="contacts-section">
         <div class="container">
-          <h2 class="contacts-title">
-            Як нас <span class="highlight">знайти</span>
-          </h2>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10163.72745031666!2d30.507897032017386!3d50.44236981280149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2sTarasa%20Shevchenko%20Blvd%2C%205%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1701287955330!5m2!1sen!2sua"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="contacts-section-container">
+            <h2 class="contacts-title">
+              Як нас <span class="highlight">знайти</span>
+            </h2>
+            <div class="contacts-section-content">
+              <iframe
+                class="contacts-section-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10163.72745031666!2d30.507897032017386!3d50.44236981280149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2sTarasa%20Shevchenko%20Blvd%2C%205%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1701287955330!5m2!1sen!2sua"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
 
-          <!-- Form -->
-          <p class="contacts-text">
-            Запишіться <span class="highlight">безкоштовно</span> та отримайте
-            подарунок
-          </p>
-          <!-- Full name field -->
-          <!-- Phone number field -->
-          <!-- Email field -->
-          <button class="button" type="submit">Записатись безкоштовно</button>
-          <p class="contacts-text-privacy">
-            Натискаючи на кнопку я погоджуюсь
-            <a href="#">з політикою конфіденційності</a>
-          </p>
+              <div class="contacts-section-form">
+                <p class="contacts-text">
+                  Запишіться <span class="highlight">безкоштовно</span> та
+                  отримайте подарунок
+                </p>
+                <form name="contact-form" autocomplete="off">
+                  <div class="form-field input">
+                    <label
+                      for="user-name"
+                      class="input-label visibility-hidden"
+                    >
+                      Ваше ім'я та прізвище
+                    </label>
+                    <input
+                      class="input-control"
+                      type="text"
+                      name="user-name"
+                      id="user-name"
+                      placeholder="Ваше ім'я та прізвище"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field input">
+                    <label for="user-tel" class="input-label visibility-hidden">
+                      Ваш номер телефону
+                    </label>
+                    <input
+                      class="input-control"
+                      type="tel"
+                      name="user-tel"
+                      id="user-tel"
+                      placeholder="Ваш номер телефону"
+                      pattern="^\+[0-9]{12}"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field input">
+                    <label
+                      for="user-email"
+                      class="input-label visibility-hidden"
+                    >
+                      Ваша електронна пошта
+                    </label>
+                    <input
+                      class="input-control"
+                      type="email"
+                      name="user-email"
+                      id="user-email"
+                      placeholder="Ваша електронна пошта"
+                      pattern="^\+[0-9]{12}"
+                      required
+                    />
+                  </div>
+
+                  <button class="button" type="submit">
+                    Записатись безкоштовно
+                  </button>
+                  <p class="contacts-text-privacy">
+                    Натискаючи на кнопку я погоджуюсь
+                    <a href="#">з політикою конфіденційності</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
