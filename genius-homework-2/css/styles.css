@@ -397,6 +397,42 @@ a {
 }
 
 /* Contacts section */
+.contacts-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contacts-section-content {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.contacts-section-map {
+  flex-shrink: 0;
+  width: 600px;
+  height: 480px;
+  margin-left: 76px;
+  border-radius: 32px;
+  border: none;
+}
+
+.contacts-section-form {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 56px;
+  background-image: '../img/backgroud.png';
+  background-color: var(--color-primary-dark);
+  width: 420px;
+  height: 480px;
+  border-radius: 32px;
+}
+
+.contacts-text {
+  margin-bottom: 32px;
+}
+
 .contacts-title {
   text-align: center;
 }
