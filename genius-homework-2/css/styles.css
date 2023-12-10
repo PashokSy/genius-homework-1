@@ -149,9 +149,17 @@ a {
 }
 
 /* Header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(7px);
+}
+
 .header-container {
   padding: 32px 0;
-  margin-bottom: 16.52px;
 }
 
 .header-link {
@@ -192,6 +200,14 @@ a {
 }
 
 /* Hero section */
+.hero-section {
+  background-image: url('../img/hero-section-background.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: inherit;
+  padding: 106px 0;
+}
+
 .hero-container {
   display: flex;
   max-width: 529px;
