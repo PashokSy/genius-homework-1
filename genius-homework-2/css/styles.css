@@ -60,6 +60,11 @@ body {
   font-size: 18px;
   line-height: 1.17;
   margin: 0;
+
+  background-image: url('../img/choose-background.png');
+  background-repeat: no-repeat;
+  background-position: center 1300px;
+  background-size: contain;
 }
 
 address {
