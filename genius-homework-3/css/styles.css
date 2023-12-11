@@ -255,6 +255,15 @@ a {
   padding-bottom: 176px;
 }
 
+@keyframes startRotation {
+  from {
+    transform: scale(0.2) rotate(0deg) rotateY(90deg) rotateX(-90deg);
+  }
+  to {
+    transform: scale(1) rotate(359deg) rotateY(0deg) rotateX(0deg);
+  }
+}
+
 .about-container::before {
   position: absolute;
   top: 32px;
@@ -264,6 +273,7 @@ a {
   background-image: url('../img/star-medium.png');
   background-repeat: no-repeat;
   content: '';
+  animation: startRotation 6s infinite alternate;
 }
 
 .about-container::after {
@@ -275,6 +285,7 @@ a {
   background-image: url('../img/star-small.png');
   background-repeat: no-repeat;
   content: '';
+  animation: startRotation 4s infinite alternate;
 }
 
 .about-content {
@@ -321,6 +332,7 @@ a {
   background-image: url('../img/star-big.png');
   background-repeat: no-repeat;
   content: '';
+  animation: startRotation 8s infinite alternate;
 }
 
 .about-image {
