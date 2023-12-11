@@ -249,9 +249,32 @@ a {
 
 /* About section */
 .about-container {
+  position: relative;
   display: flex;
   gap: 32px;
   padding-bottom: 176px;
+}
+
+.about-container::before {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url('../img/star-medium.png');
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.about-container::after {
+  position: absolute;
+  top: 270px;
+  right: 6px;
+  width: 16px;
+  height: 16px;
+  background-image: url('../img/star-small.png');
+  background-repeat: no-repeat;
+  content: '';
 }
 
 .about-content {
@@ -284,8 +307,20 @@ a {
 
 .images-container {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   gap: 40px;
+}
+
+.images-container::after {
+  position: absolute;
+  top: 336px;
+  right: 295px;
+  width: 64px;
+  height: 64px;
+  background-image: url('../img/star-big.png');
+  background-repeat: no-repeat;
+  content: '';
 }
 
 .about-image {
@@ -424,6 +459,10 @@ a {
   cursor: pointer;
 }
 
+.carousel-button.next {
+  transform: rotate(180deg);
+}
+
 .carousel-button:hover {
   background-color: var(--color-primary-dark);
   fill: var(--color-secondary-white);
@@ -533,12 +572,24 @@ a {
 
 /* Footer */
 .footer {
+  position: relative;
   background-color: var(--color-primary-dark);
   padding: 56px 0;
   background-image: url('../img/footer-background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.footer::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 248px;
+  height: 152px;
+  background-image: url('../img/medicine-decor.png');
+  background-repeat: no-repeat;
+  content: '';
 }
 
 .footer-container {
