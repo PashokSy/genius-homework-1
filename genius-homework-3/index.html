@@ -71,7 +71,9 @@
               <h1 lang="en">beauty zone</h1>
             </div>
             <div class="hero-button">
-              <button class="button" type="submit">Замовити дзвінок</button>
+              <button class="modal-btn-open button" type="submit">
+                Замовити дзвінок
+              </button>
               <p>
                 Запишись та отримай безкоштовну консультацію нашого косметолога
               </p>
@@ -244,6 +246,7 @@
                       name="user-name"
                       id="user-name"
                       placeholder="Ваше ім'я та прізвище"
+                      pattern="([a-zA-Z]+\s){2,}"
                       required
                     />
                   </div>
@@ -417,6 +420,7 @@
                 name="user-name"
                 id="user-name"
                 placeholder="Ваше ім'я та прізвище"
+                pattern="([a-zA-Z]+\s){2,}"
                 required
               />
             </div>
@@ -471,5 +475,7 @@
         </div>
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

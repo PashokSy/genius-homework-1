@@ -695,6 +695,7 @@ a {
   justify-content: center;
   padding: 24px;
   background-color: rgba(1, 28, 68, 0.5);
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .backdrop.is-hidden {
