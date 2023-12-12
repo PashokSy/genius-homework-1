@@ -230,12 +230,16 @@
                   отримайте подарунок
                 </p>
                 <form name="contact-form" autocomplete="off">
-                  <div class="form-field input">
-                    <label for="user-name" class="input-label visually-hidden">
+                  <div class="contact-form-field">
+                    <label
+                      for="user-name"
+                      class="input-label visually-hidden"
+                      form="user-name"
+                    >
                       Ваше ім'я та прізвище
                     </label>
                     <input
-                      class="input-control"
+                      class="input-control input"
                       type="text"
                       name="user-name"
                       id="user-name"
@@ -244,12 +248,16 @@
                     />
                   </div>
 
-                  <div class="form-field input">
-                    <label for="user-tel" class="input-label visually-hidden">
+                  <div class="contact-form-field">
+                    <label
+                      for="user-tel"
+                      class="input-label visually-hidden"
+                      form="user-tel"
+                    >
                       Ваш номер телефону
                     </label>
                     <input
-                      class="input-control"
+                      class="input-control input"
                       type="tel"
                       name="user-tel"
                       id="user-tel"
@@ -259,17 +267,20 @@
                     />
                   </div>
 
-                  <div class="form-field input">
-                    <label for="user-email" class="input-label visually-hidden">
+                  <div class="contact-form-field">
+                    <label
+                      for="user-email"
+                      class="input-label visually-hidden"
+                      form="user-email"
+                    >
                       Ваша електронна пошта
                     </label>
                     <input
-                      class="input-control"
+                      class="input-control input"
                       type="email"
                       name="user-email"
                       id="user-email"
                       placeholder="Ваша електронна пошта"
-                      pattern="^\+[0-9]{12}"
                       required
                     />
                   </div>
@@ -377,5 +388,88 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">
+          <svg width="16" height="16">
+            <use href="./img/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal-title">Замовити дзвінок</h2>
+        <div class="modal-form-container">
+          <p class="modal-text">
+            Запишіться <span class="modal-highlight">безкоштовно</span> <br />
+            та отримайте подарунок
+          </p>
+          <form name="modal-form" autocomplete="off">
+            <div class="modal-form-field">
+              <label
+                for="user-name"
+                class="input-label visually-hidden"
+                for="user-name"
+              >
+                Ваше ім'я та прізвище
+              </label>
+              <input
+                class="modal-input-control input"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="Ваше ім'я та прізвище"
+                required
+              />
+            </div>
+
+            <div class="modal-form-field">
+              <label
+                for="user-tel"
+                class="input-label visually-hidden"
+                form="user-tel"
+              >
+                Ваш номер телефону
+              </label>
+              <input
+                class="modal-input-control input"
+                type="tel"
+                name="user-tel"
+                id="user-tel"
+                placeholder="Ваш номер телефону"
+                pattern="^\+[0-9]{12}"
+                required
+              />
+            </div>
+
+            <div class="modal-form-field">
+              <label
+                for="user-email"
+                class="input-label visually-hidden"
+                form="user-email"
+              >
+                Ваша електронна пошта
+              </label>
+              <input
+                class="modal-input-control input"
+                type="email"
+                name="user-email"
+                id="user-email"
+                placeholder="Ваша електронна пошта"
+                required
+              />
+            </div>
+
+            <button class="modal-button button" type="submit">
+              Записатись безкоштовно
+            </button>
+            <p class="contacts-terms">
+              Натискаючи на кнопку я погоджуюсь
+              <a class="contacts-terms-link" href="#"
+                >з політикою конфіденційності</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
