@@ -47,6 +47,10 @@
 }
 
 /* Base */
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -121,6 +125,33 @@ a {
   overflow: hidden;
 }
 
+/* Input */
+.input {
+  position: relative;
+  padding: 18px 32px;
+  width: 100%;
+  font-size: 13px;
+  border: 2px solid var(--color-secondary-gray-light);
+  border-radius: 32px;
+  color: var(--color-secondary-white);
+  background-color: transparent;
+}
+
+.input-label {
+  position: absolute;
+  top: 18px;
+  left: 32px;
+}
+
+.input:focus {
+  background-color: var(--color-secondary-gray-light);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-secondary-white);
+}
+
 /* Button */
 .button {
   font-weight: 500;
@@ -142,6 +173,7 @@ a {
 /* Link */
 .link {
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .link:hover {
@@ -535,31 +567,8 @@ a {
   color: var(--color-primary-light);
 }
 
-.input-label {
-  position: absolute;
-  top: 18px;
-  left: 32px;
-}
-
-.input-control {
-  position: relative;
-  padding: 18px 32px;
+.contact-form-field {
   margin-bottom: 16px;
-  width: 100%;
-  font-size: 13px;
-  border: 2px solid var(--color-secondary-gray-light);
-  border-radius: 32px;
-  color: var(--color-secondary-white);
-  background-color: transparent;
-}
-
-.input-control:focus {
-  background-color: var(--color-secondary-gray-light);
-  outline: none;
-}
-
-.input-control::placeholder {
-  color: var(--color-secondary-white);
 }
 
 .contacts-section-button {
@@ -672,4 +681,85 @@ a {
 .footer-link {
   color: var(--color-secondary-white);
   font-size: 16px;
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(1, 28, 68, 0.5);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 724px;
+  height: 100%;
+  max-height: 680px;
+  padding: 42px 144px;
+  background-color: var(--color-primary-dark);
+  background-image: url('../img/modal-background.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 48px;
+  overflow-y: auto;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 42px;
+  right: 42px;
+  fill: var(--color-primary-dark);
+  stroke: var(--color-secondary-white);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-title,
+.modal-text {
+  color: var(--color-secondary-white);
+  text-align: center;
+}
+
+.modal-title {
+  margin-bottom: 40px;
+}
+
+.modal-text {
+  max-width: 274px;
+  align-self: center;
+}
+
+.modal-highlight {
+  color: var(--color-primary-light);
+}
+
+.modal-form-container {
+  max-width: 310px;
+  align-self: center;
+}
+
+.modal-form-field {
+  margin-bottom: 24px;
+}
+
+.modal-button {
+  padding: 16px 32px;
+  margin-bottom: 8px;
 }
