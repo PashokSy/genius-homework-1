@@ -10,7 +10,12 @@ let swiper = new Swiper('.swiper-container', {
       slidesPerView: 3,
     },
   },
-  pagination: { el: '.swiper-pagination' },
+  pagination: {
+    el: '.pagination',
+    bulletClass: 'pagination-button',
+    bulletActiveClass: 'pagination-button-active',
+    clickable: true,
+  },
   navigation: {
     nextEl: '.carousel-button.next',
     prevEl: '.carousel-button.prev',
