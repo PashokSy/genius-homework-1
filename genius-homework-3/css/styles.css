@@ -435,21 +435,19 @@ a {
   margin-bottom: 48px;
 }
 
-.procedures-container {
+.procedures-slider {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 32px;
 }
 
-.procedures-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+.procedures-container {
+  overflow: hidden;
 }
 
-.procedures-item {
-  flex-basis: calc((100% - 32px) / 3);
+.procedures-list {
+  margin-bottom: 32px;
 }
 
 .procedures-card {
