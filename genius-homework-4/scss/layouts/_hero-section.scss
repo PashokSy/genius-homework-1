@@ -1,0 +1,46 @@
+.hero-section {
+  background-image: url('../img/hero-section-background.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: inherit;
+  padding: 106px 0;
+
+  &__container {
+    display: flex;
+    max-width: 529px;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-left: 106px;
+    padding-bottom: 126.5px;
+  }
+
+  &__text {
+    color: var(--color-primary-dark);
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    color: var(--color-primary-light);
+    text-transform: capitalize;
+    font-size: 140px;
+    line-height: 0.8;
+    margin-bottom: 0;
+  }
+
+  &__button--container {
+    max-width: 238px;
+  }
+
+  &__button {
+    padding: 16px 32px;
+    margin-bottom: 14px;
+  }
+
+  &__button--text {
+    text-align: center;
+    color: var(--color-secondary-gray);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
