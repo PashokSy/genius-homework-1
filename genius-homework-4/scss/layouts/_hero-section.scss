@@ -1,40 +1,77 @@
 .hero-section {
-  background-image: url('../img/hero-section-background.jpg');
+  padding: 70px 0 56px;
+  background-image: url('../img/hero-section-background-mobile.png');
   background-repeat: no-repeat;
   background-position: right top;
   background-size: inherit;
-  padding: 106px 0;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 106px 0;
+    background-image: url('../img/hero-section-background.jpg');
+  }
 
   &__container {
     display: flex;
-    max-width: 529px;
+    max-width: 528px;
     flex-wrap: wrap;
-    gap: 40px;
-    margin-left: 106px;
-    padding-bottom: 126.5px;
+    gap: 32px;
+    padding-bottom: 56px;
+    justify-content: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      justify-content: left;
+      gap: 40px;
+      margin-left: 106px;
+      padding-bottom: 126px;
+    }
   }
 
   &__text {
     color: var(--color-primary-dark);
-    font-size: 18px;
-    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 18px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
   }
 
   &__title {
     color: var(--color-primary-light);
     text-transform: capitalize;
-    font-size: 140px;
-    line-height: 0.8;
     margin-bottom: 0;
+    font-size: 54px;
+    line-height: 0.8;
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 140px;
+      text-align: left;
+    }
   }
 
   &__button--container {
-    max-width: 238px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+      max-width: 238px;
+    }
   }
 
   &__button {
     padding: 16px 32px;
-    margin-bottom: 14px;
+    margin: 0 auto 14px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin: 0 0 14px;
+    }
   }
 
   &__button--text {
@@ -42,5 +79,9 @@
     color: var(--color-secondary-gray);
     font-size: 12px;
     line-height: 1.5;
+    max-width: 220px;
+
+    @media screen and (min-width: $bp-tablet) {
+    }
   }
 }
