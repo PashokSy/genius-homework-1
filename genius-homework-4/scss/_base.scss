@@ -29,10 +29,15 @@ address {
 h1,
 h2 {
   font-family: 'Play', sans-serif;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 1.16;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
   margin-top: 0;
+
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 64px;
+    font-weight: 700;
+  }
 }
 
 h3,

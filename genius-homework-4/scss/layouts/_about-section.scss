@@ -3,46 +3,75 @@
     position: relative;
     display: flex;
     gap: 32px;
-    padding-bottom: 176px;
+    padding-bottom: 104px;
   }
 
   &__container::before {
-    position: absolute;
-    top: 32px;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    background-image: url('../img/star-medium.png');
-    background-repeat: no-repeat;
-    content: '';
-    animation: startRotation 6s infinite alternate;
+    @media screen and (min-width: $bp-desktop) {
+      position: absolute;
+      top: 32px;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background-image: url('../img/star-medium.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      animation: starRotation 6s infinite alternate;
+    }
   }
 
   &__container::after {
     position: absolute;
-    top: 270px;
-    right: 6px;
-    width: 16px;
-    height: 16px;
-    background-image: url('../img/star-small.png');
+    bottom: 42px;
+    right: 22px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/star-big.png');
     background-repeat: no-repeat;
+    background-size: contain;
     content: '';
-    animation: startRotation 4s infinite alternate;
+    animation: starRotation 4s infinite alternate;
+
+    @media screen and (min-width: $bp-desktop) {
+      top: 270px;
+      right: 6px;
+      width: 16px;
+      height: 16px;
+      background-image: url('../img/star-small.png');
+    }
   }
 
   &__content {
-    margin-top: 40px;
-    max-width: 708px;
+    @media screen and (min-width: $bp-tablet) {
+      margin-top: 40px;
+      max-width: 708px;
+    }
   }
 
   &__title {
-    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 32px;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 64px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
   }
 
   &__text {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.7;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 22px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 40px;
+    }
   }
 
   &__text:last-child {
@@ -50,22 +79,29 @@
   }
 
   &__images {
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    gap: 40px;
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
   }
 
   &__images::after {
-    position: absolute;
-    top: 336px;
-    right: 295px;
-    width: 64px;
-    height: 64px;
-    background-image: url('../img/star-big.png');
-    background-repeat: no-repeat;
-    content: '';
-    animation: startRotation 8s infinite alternate;
+    @media screen and (min-width: $bp-desktop) {
+      position: absolute;
+      top: 336px;
+      right: 295px;
+      width: 64px;
+      height: 64px;
+      background-image: url('../img/star-big.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      animation: starRotation 8s infinite alternate;
+    }
   }
 
   &__image {
@@ -84,7 +120,7 @@
   }
 }
 
-@keyframes startRotation {
+@keyframes starRotation {
   from {
     transform: scale(0.2) rotate(0deg) rotateY(90deg) rotateX(-90deg);
   }
