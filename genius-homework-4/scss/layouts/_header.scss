@@ -61,4 +61,17 @@
   &__icon:hover {
     fill: var(--color-primary-light);
   }
+
+  &__burger-menu {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    fill: var(--color-secondary-white);
+
+    @media screen and (min-width: $bp-tablet) {
+      display: none;
+    }
+  }
 }
