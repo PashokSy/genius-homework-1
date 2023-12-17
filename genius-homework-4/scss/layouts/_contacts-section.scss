@@ -1,47 +1,94 @@
 .contact-section {
+  padding-bottom: 0;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-bottom: 96px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 48px;
-    margin-bottom: 96px;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin: auto;
+      gap: 48px;
+      max-width: 1060px;
+    }
   }
 
   &__title {
     margin-bottom: 0;
     text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-weight: 700;
+      font-size: 64px;
+    }
   }
 
   &__content {
     display: flex;
-    flex-direction: row;
-    gap: 32px;
+    flex-direction: column-reverse;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 32px;
+    }
   }
 
   &__map {
     flex-shrink: 0;
-    width: 600px;
-    height: 480px;
-    margin-left: 76px;
-    border-radius: 32px;
+    height: 232px;
+    margin: 0 -24px;
     border: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin: auto;
+      width: 400px;
+      height: 480px;
+      border-radius: 32px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 600px;
+    }
   }
 
   &__form {
+    align-self: center;
     display: flex;
     flex-direction: column;
-    padding: 48px 56px;
+    padding: 42px 24px;
     background-image: url('../img/form-background.png');
     background-color: var(--color-primary-dark);
-    width: 420px;
-    height: 480px;
+    width: 320px;
+    height: 434px;
     border-radius: 32px;
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 420px;
+      height: 480px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      padding: 48px 56px;
+    }
 
     &--text {
       color: var(--color-secondary-white);
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       font-weight: 500;
       font-size: 22px;
       text-align: center;
+
+      @media screen and (min-width: $bp-desktop) {
+        display: block;
+        margin-bottom: 32px;
+      }
     }
   }
 
@@ -51,7 +98,11 @@
 
   &__button {
     display: block;
-    padding: 16px 32px;
+    padding: 12px 24px;
     margin: 0 auto 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 16px 32px;
+    }
   }
 }
